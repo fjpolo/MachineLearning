@@ -42,6 +42,9 @@ error_sqr = error.^2;
 %1/(2*m). That completed sum is the cost value J.
 %J = (1/(2*97))*sum(error_sqr);
 m = size(X,1);
+%
+%
+%
 J = (1/(2*m))*sum(((X*theta)-y).^2);
 %
 end
