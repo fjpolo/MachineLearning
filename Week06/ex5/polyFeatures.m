@@ -15,10 +15,12 @@ X_poly = zeros(numel(X), p);
 %
 % 
 
-
-
-
-
+% First column is X
+X_poly(:,1) = X;
+% Add columns: x^2, x^3...x^p
+for i= 2:p
+  X_poly(:,i) = X.*X_poly(:,i-1); 
+end
 
 % =========================================================================
 

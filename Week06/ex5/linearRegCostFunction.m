@@ -23,7 +23,7 @@ grad = zeros(size(theta));
 J = sum((X*theta - y).^2)/(2*m) + sum(theta(2:end).^2)*lambda/(2*m);
 
 % Gradient
-p = X'*(X*theta - y)/m; % h' * (h-y)/m
+p = X'*(X*theta - y)/m; % X' * (h-y)/m
 % first element
 grad(1) = p(1);
 % regularized gradient
